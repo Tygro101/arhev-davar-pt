@@ -1,0 +1,7 @@
+<div class="tag">
+  <div #text  class="text">
+      <div class="sub-title" *ngIf='!isSubTag'>{{tagDataHolder.tag}}</div>
+      <li *ngIf='isSubTag'>{{tagDataHolder.tag}}</li>
+  </div>
+  <tag-component [tagDataHolder]='subTagDataHolder' [isSubTag]='true' *ngFor='let subTagDataHolder of tagDataHolder.subTags'></tag-component>
+</div>
